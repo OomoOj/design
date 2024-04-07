@@ -1,0 +1,108 @@
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  background: black;
+}
+
+
+.buymeacoffee {
+  text-decoration: none;
+  position: fixed;
+  left:0;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buymeacoffee:hover {
+  width: 5rem;
+  height: 5rem;
+  line-height: 4rem;
+}
+.buymeacoffee {
+    animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+footer{
+  margin:0;
+  padding:0;
+  font-family:sans-serif;
+}
+
+.box{
+  width:100%;
+  height:80px;
+  position:absolute;
+  bottom:0%;left:50%;
+  transform:translate(-50%,-50%)
+}
+
+.box .face{
+  position:absolute;
+  width:500px;
+  height:80px;
+  font-size:6em;
+  text-align:Center;
+  line-height:80px;
+  overflow:hidden;
+}
+
+.box .face span{
+  width:100%;
+  height:100%;
+  display:block;
+  transition: .5s;
+}
+
+.box .face.face1{
+  background: rgb(16,10,108);
+background: linear-gradient(90deg, rgba(16,10,108,0.8198633066813151) 0%, rgba(9,9,121,0.650078116522895) 100%);
+  color:#fff;
+  left:0;
+  transform-origin:left;
+  transform:perspective(800px) rotateY(-64.03deg)
+}
+
+.box .face.face2{
+  background: rgb(16,10,108);
+  background: linear-gradient(90deg, rgba(16,10,108,0.8198633066813151) 0%, rgba(9,9,121,0.650078116522895) 100%);
+  color:#fff;
+  right:0;
+  transform-origin:right;
+  transform:perspective(800px) rotateY(64.03deg)
+}
+
+.box .face.face1 span{
+  position:absolute;
+  animation:animate1 10s linear infinite
+}
+
+@keyframes animate1{
+  0%{left:200%}
+  100%{left:-100%}
+}
+
+.box .face.face2 span{
+  position:absolute;
+  animation:animate2 10s linear infinite
+}
+
+@keyframes animate2{
+  0%{left:100%}
+  100%{left:-200%}
+}
